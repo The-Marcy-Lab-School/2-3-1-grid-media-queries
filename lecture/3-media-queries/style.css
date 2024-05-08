@@ -21,25 +21,29 @@
     background: plum;
   }
 }
+
 @media (min-width: 700px) {
   .box {
     background: orchid;
   }
 }
+
 @media (min-width: 800px) {
   .box {
     background: mediumpurple;
-    color: white; /* Notice how screen sizes larger than this will ALL have white text */
+    color: white;
+    /* Notice how screen sizes larger than this will ALL have white text */
   }
 }
+
 @media (min-width: 900px) {
   .box {
     background: darkviolet;
   }
 }
+
 @media (min-width: 1000px) {
   .box {
     background: indigo;
   }
 }
-

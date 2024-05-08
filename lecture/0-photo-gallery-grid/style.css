@@ -28,6 +28,7 @@ nav ul {
   gap: 1rem;
 }
 
+
 main {
   display: flex;
   flex-direction: column;
@@ -35,14 +36,17 @@ main {
   gap: .5rem;
 }
 
+
+h1 {
+  margin: 2rem;
+}
+
+/* As a best practice, put your images inside of a container, like a <li> or a <div> and
+use these styles. */
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-h1 {
-  margin: 2rem;
 }
 
 #photos-grid {
@@ -51,11 +55,14 @@ h1 {
 
   display: grid;
 
-  /* 5 equal sized columns */
-  /* new rows will have height === 20% of viewport width */
+  /* 5 equal sized columns, taking up the full size of their container*/
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  /* new rows will have height === 20% of viewport width */
   /* grid-auto-rows: 20vw;  */
-  /* grid-auto-rows: 1fr;  */
+
+  /* all rows will be the same size */
+  /* grid-auto-rows: 1fr; */
 
   /* just like flexbox! */
   gap: 5px;

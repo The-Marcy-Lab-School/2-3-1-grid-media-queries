@@ -1,15 +1,45 @@
 <style>.markdown-body{ min-width: 500px; }</style>
 
-# 2.1.1 Grid + Media Queries Lecture Plan
+# 2.1.1 Grid + Media Queries
 
 **Table of Contents:**
 
+- [Terms](#terms)
 - [Part 0 - Grid + Media Queries Demo!](#part-0---grid--media-queries-demo)
 - [Part 1 - Grid vs Flexbox](#part-1---grid-vs-flexbox)
 - [Part 2 - Grid Template Columns and Fractional Units](#part-2---grid-template-columns-and-fractional-units)
 - [Part 3 - Media Queries](#part-3---media-queries)
 - [Part 4 - Spanning Rows and Columns](#part-4---spanning-rows-and-columns)
+  - [Grid Tracks](#grid-tracks)
 - [Bonus! - Flexbox Media Query Challenge](#bonus---flexbox-media-query-challenge)
+
+## Terms
+* **CSS Grid** is a `display` type that is useful for making grids (duh)!
+* `grid-template-columns` defines:
+  * the number of columns
+  * the width of each column
+* The `fr` unit (the "fractional unit") is unique to grid. It evenly distributes the grid container's available width to each grid item without overflowing.
+* **Grid Tracks** are numbered starting at `1` and go between columns and rows.
+* **Media queries** allow us to apply CSS _in response_ to changes to the device's screen size (and other things too!). 
+* Media queries are how we implement **responsive web design**, ensuring usability across all devices.
+* **Breakpoints** are points at which a responsive web design will shift.
+
+```css
+.grid-container { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* make 3 equal-sized columns */
+}
+
+/* starting at 700px screen width, make the grid have 4 columns */
+@media (min-width: 700px) {
+  .box {
+    background: orchid;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+```
 
 ## Part 0 - Grid + Media Queries Demo!
 
@@ -22,7 +52,7 @@
 > * Briefly go over the concept of media queries and ask fellows why these may be useful.
 > * Take questions but be mindful of time.
 
-* **CSS Grid** is a `display` type that is useful for making grids (duh)!
+* **CSS Grid** is a `display` type that allows us to arrange items in rows AND columns
 * **Media queries** allow us to apply CSS _in response_ to changes to the device's screen size (and other things too!). 
 * Media queries are how we implement **responsive web design**, ensuring usability across all devices.
 
@@ -36,7 +66,7 @@
 > * Use the diagram below to explain the difference between flexbox and grid. Pose the question to the group, how many rows/columns are in the example pictured above?
 
 * Flexbox is a `display` type that allows us to arrange items in rows OR columns
-* Grid is a `display` type allows us to arrange items in rows AND columns
+* Grid is a `display` type that allows us to arrange items in rows AND columns
 * In a grid, grid items can span across multiple rows and/or columns
 
 ![](images/flex-vs-grid.png)
@@ -112,13 +142,13 @@ grid-template-columns: 1fr 2fr 2fr 1fr; /* make 4 equal-sized columns */
 
 
 | Breakpoint                         | Dimensions |
-|------------------------------------|------------|
+| ---------------------------------- | ---------- |
 | X-Small Devices (portrait phones)  | < 576px    |
 | Small Devices (landscape phones)   | ≥ 576px    |
 | Medium Devices (tables)            | ≥ 768px    |
 | Large Devices (desktops)           | ≥ 992px    |
-| X-Large Devices (large desktops)   | ≥ 1200px    |
-| XX-Large Devices (larger desktops) | ≥ 1400px    |
+| X-Large Devices (large desktops)   | ≥ 1200px   |
+| XX-Large Devices (larger desktops) | ≥ 1400px   |
 
 * They don't target every specific use case or device, but the ranges provide broad coverage.
 * **Challenge**: At `700px` and `900px`, change the number of columns to 2 and then to 3.
