@@ -1,5 +1,3 @@
-<style>.markdown-body{ min-width: 500px; }</style>
-
 # 2.1.1 Grid + Media Queries
 
 **Table of Contents:**
