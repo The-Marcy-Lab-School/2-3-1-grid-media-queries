@@ -28,22 +28,10 @@
   }
 }
 
-@media (min-width: 800px) {
-  .box {
-    background: mediumpurple;
-    color: white;
-    /* Notice how screen sizes larger than this will ALL have white text */
-  }
-}
+/* TODO make a media query for 800px to set the background to mediumpurple and color to white */
 
-@media (min-width: 900px) {
-  .box {
-    background: darkviolet;
-  }
-}
 
-@media (min-width: 1000px) {
-  .box {
-    background: indigo;
-  }
-}
+/* TODO make a media query for 900 to set the background to darkviolet */
+
+
+/* TODO make a media query for 900 to set the background to indigo */
